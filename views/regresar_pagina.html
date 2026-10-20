@@ -1,0 +1,13 @@
+$def with (resultado, actual, abandonada)
+<h1>Regresar a la pagina anterior</h1>
+<a href="/">Menu</a>
+<br><br>
+
+$if resultado == 'vacio':
+    <p style="color:red;"><b>ALERTA:</b> el historial esta vacio, no hay pagina a la cual regresar.</p>
+$elif resultado == 'sin_anterior':
+    <p style="color:red;"><b>ALERTA:</b> no hay pagina anterior. Solo has visitado una pagina.</p>
+    <p>Pagina actual: <b>$actual</b></p>
+$else:
+    <p>Saliste de: <b>$abandonada</b></p>
+    <p>Pagina actual (la anterior): <b>$actual</b></p>

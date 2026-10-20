@@ -1,0 +1,15 @@
+$def with (vacia, cantidad, eliminado)
+<h1>Estado del historial</h1>
+<a href="/">Menu</a>
+<br><br>
+
+$if eliminado:
+    <p style="color:green;"><b>El historial fue eliminado.</b></p>
+
+$if vacia:
+    <p>El historial esta <b>vacio</b>. No hay nada que eliminar.</p>
+$else:
+    <p>El historial <b>NO esta vacio</b>: tiene <b>$cantidad</b> pagina(s) guardada(s).</p>
+    <form action="/verificar_historial" method="post">
+        <button type="submit">Eliminar historial</button>
+    </form>
